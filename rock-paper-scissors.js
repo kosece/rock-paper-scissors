@@ -77,6 +77,7 @@ while (true) {
     if (eleccion == "N") {
         break;
     }
+    score = [0, 0]
 }
 
 // POSIBILITIES:
