@@ -15,10 +15,17 @@ const computerPlay = () => {
     }
 }
 
-// GET USER'S CHOICE
+// GET USER'S CHOICE (if the input isn't any of the 3 options, the code will ask the user to input his choice again)
 const userPlay = () => {
-    let choice = prompt("Make your pick (rock, paper or scissors)")
-    return choice;
+    while (true) {
+        let choice = prompt("Make your pick (rock, paper or scissors)").toLowerCase();
+        if (choice === "rock" || choice === "paper" || choice === "scissors") {
+            return choice;
+        }
+        else {
+            alert("Please enter a valid answer")
+        }
+    }
 }
 
 // PLAY ROUND
@@ -65,8 +72,8 @@ const playGame = () => {
 // LET USER PLAY ANOTHER GAME OR STOP THE PROGRAM
 while (true) {
     playGame();
-    let eleccion = prompt("¿Jugar otra ronda? Y/N").toUpperCase;
-    if (eleccion === "N") {
+    let eleccion = prompt("¿Jugar otra ronda? Y/N").toLowerCase();
+    if (eleccion === "n") {
         break;
     }
     score = [0, 0]
