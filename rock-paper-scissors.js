@@ -1,3 +1,4 @@
+// INITIALIZE SCORE
 let score = [0, 0];
 
 // GET RANDOM CHOICE
@@ -43,17 +44,7 @@ const playRound = (userChoice, computerChoice) => {
 
 }
 
-
-/* 
-for (i = 0; i < 10; i++) {
-    console.log(playRound());
-    if (score[0] === 5) {
-        console.log(`You win the game. The score is ${score}`);
-    }
-    else if (score[1] === 5) {
-        console.log(`The computer wins the game. The score is ${score}`)
-    }
-} */
+// PLAY GAME FUNCTION
 const playGame = () => {
     while (true) {
         alert(playRound());
@@ -71,17 +62,12 @@ const playGame = () => {
     }
 }
 
+// LET USER PLAY ANOTHER GAME OR STOP THE PROGRAM
 while (true) {
     playGame();
     let eleccion = prompt("¿Jugar otra ronda? Y/N").toUpperCase;
-    if (eleccion == "N") {
+    if (eleccion === "N") {
         break;
     }
     score = [0, 0]
 }
-
-// POSIBILITIES:
-// ROCK BEATS SCISSORS
-// SCISSORS BEAT PAPER
-// PAPER BEAT ROCK
-// DRAW
