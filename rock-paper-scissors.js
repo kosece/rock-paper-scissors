@@ -26,19 +26,19 @@ const playRound = (userChoice, computerChoice) => {
     userChoice = userPlay();
     computerChoice = computerPlay();
 
-    console.log(userChoice);
-    console.log(computerChoice);
+    console.log(`User choice is ${userChoice}`);
+    console.log(`Computer choice is ${computerChoice}`);
 
     if (userChoice === computerChoice) {
-        return "It's a draw!";
+        return `It's a draw! The score is ${score}`;
     }
     else if (userChoice === "rock" && computerChoice === "scissors" || userChoice === "scissors" && computerChoice === "paper" || userChoice === "paper" && computerChoice === "rock") {
         score[0]++;
-        return `You win! ${userChoice} beats ${computerChoice}`
+        return `You win! ${userChoice} beats ${computerChoice}. The score is ${score}`
     }
     else {
         score[1]++;
-        return `You lose. ${computerChoice} beats ${userChoice}`
+        return `You lose. ${computerChoice} beats ${userChoice}. The score is ${score}`
     }
 
 }
@@ -56,13 +56,13 @@ for (i = 0; i < 10; i++) {
 } */
 const playGame = () => {
     while (true) {
-        console.log(playRound());
+        alert(playRound());
         if (score[0] === 5) {
-            console.log(`You win the game. The score is ${score}`);
+            alert(`You win the game. The score is ${score}`);
             break;
         }
         else if (score[1] === 5) {
-            console.log(`The computer wins the game. The score is ${score}`);
+            alert(`The computer wins the game. The score is ${score}`);
             break;
         }
         else {
