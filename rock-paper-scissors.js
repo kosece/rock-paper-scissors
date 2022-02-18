@@ -72,7 +72,7 @@ const playGame = () => {
 // LET USER PLAY ANOTHER GAME OR STOP THE PROGRAM
 while (true) {
     playGame();
-    let eleccion = prompt("¿Jugar otra ronda? Y/N").toLowerCase();
+    let eleccion = prompt("¿Play another round? Y/N").toLowerCase();
     if (eleccion === "n") {
         break;
     }
