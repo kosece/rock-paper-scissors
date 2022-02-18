@@ -18,7 +18,7 @@ const computerPlay = () => {
 // GET USER'S CHOICE (if the input isn't any of the 3 options, the code will ask the user to input his choice again)
 const userPlay = () => {
     while (true) {
-        let choice = prompt("Make your pick (rock, paper or scissors)").toLowerCase();
+        let choice = prompt("Take your pick (rock, paper or scissors)").toLowerCase();
         if (choice === "rock" || choice === "paper" || choice === "scissors") {
             return choice;
         }
