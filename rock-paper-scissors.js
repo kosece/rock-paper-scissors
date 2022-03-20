@@ -29,7 +29,7 @@ const userPlay = () => {
 }
 
 // PLAY ROUND
-const playRound = (userChoice, computerChoice) => {
+const playRound = () => {
 
     userChoice = userPlay();
     computerChoice = computerPlay();
@@ -68,6 +68,8 @@ const playGame = () => {
         }
     }
 }
+
+alert("Welcome to my rock-paper-scissors game! You'll be playing against a computer. The first to reach a score of 5 wins.")
 
 // LET USER PLAY ANOTHER GAME OR STOP THE PROGRAM
 while (true) {
